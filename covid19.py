@@ -1,4 +1,5 @@
 #imports
+#funktioner med matplotlib
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -41,5 +42,3 @@ def CasesVsDeaths():
     plt.title("Deathrate by COVID-19", bbox={'facecolor':'1'}) #title
     plt.legend()
     plt.show()
-
-CasesVsDeaths()
