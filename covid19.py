@@ -38,7 +38,7 @@ def CVSD():
     fig1, ax1 = plt.subplots()
     ax1.pie(sizes, explode=explode, labels=mylabels, autopct='%1.1f%%',
             shadow=True, startangle=180)
-    plt.title("Deathrate by COVID-19", bbox={'facecolor':'1'})
+    plt.title("Deathrate by COVID-19", bbox={'facecolor':'1'}) #title
     plt.legend()
     plt.show()
 
