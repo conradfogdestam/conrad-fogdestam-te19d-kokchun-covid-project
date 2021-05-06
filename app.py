@@ -1,41 +1,59 @@
 import dash
+from plotlyfunktions import *
+import matplotlib as plt
+import dash_bootstrap_components as dbc
 import dash_core_components as dcc
 import dash_html_components as html
+import plotly.express as px
+import pandas as pd
 
-app = dash.Dash()
-colors = {
-    'background': '#FFFFFF',
-    'text': '#7FDBFF'
-}
-app.layout = html.Div(style={'backgroundColor': colors['background']}, children=[
-    html.H1(
-        children='Hello Dash',
-        style={
-            'textAlign': 'center',
-            'color': colors['text']
-        }
-    ),
-    html.Div(children='Dash: web application framework for Python.', style={
-        'textAlign': 'center',
-        'color': colors['text']
-    }),
-    dcc.Graph(
-        id='Graph1',
-        figure={
-            'data': [
-                {'x': [1, 2, 3], 'y': [4, 1, 2], 'type': 'bar', 'name': 'SF'},
-                {'x': [1, 2, 3], 'y': [2, 4, 5], 'type': 'bar', 'name': u'Montréal'},
-            ],
-            'layout': {
-                'plot_bgcolor': colors['background'],
-                'paper_bgcolor': colors['background'],
-                'font': {
-                    'color': colors['text']
-                }
-            }
-        }
-    )
+
+app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
+
+#--------------------------------------------------------------
+
+fig1 = NationalDailyDeaths()
+fig2 = NationalDailyIcuAdmissions()
+fig3 = CasesVsDeaths()
+
+#-----------------------------------------------------------
+
+
+app.layout = html.Div(children=[
+    html.Div([
+        html.H1(children='National Daily Deaths'),
+
+        dcc.Graph(
+            id='National Daily',
+            figure=fig1
+        ),  
+    ], style={'textAlign': 'center'}),
+
+#----------------------------------------------------------------------
+
+    html.Div([
+        html.H1(children='National Daily ICU Admissions'),
+
+        dcc.Graph(
+            id='NationalDailyIcuAdmissions',
+            figure=fig2
+        ),  
+    ], style={'textAlign': 'center'}),
+
+#-----------------------------------------------------------------------    
+
+    html.Div([
+        html.H1(children='Covid Mortality Rate'),
+
+        dcc.Graph(
+            id='CasesVSDeaths',
+            figure=fig3
+        ),  
+    ], style={'textAlign': 'center'}),
+
+
 ])
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     app.run_server(debug=True)

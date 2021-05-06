@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 #funktion som gör en barchart för National daily deaths
-def NDD():
+def NationalDailyDeaths():
     dfndd = pd.read_csv('National_Daily_Deaths.csv') #däser in csv filen
 
 #använder Datum som x axel och height den andra columnen national dily deaths
@@ -15,7 +15,7 @@ def NDD():
     plt.show()
 
 #funktion för antal ICU admissions per dag på en nationell nivå
-def NDICU():
+def NationalDailyIcuAdmissions():
     dfndd = pd.read_csv('National_Daily_ICU_Admissions.csv')
 #bar chart för med labels som visar efter datum
     plt.bar(x=dfndd['Date'], height=dfndd['National_Daily_ICU_Admissions'])
@@ -23,7 +23,7 @@ def NDICU():
 
 
 #funktion för att räkna death rate för covid 19 inom sverige
-def CVSD():
+def CasesVsDeaths():
     #räknar totala summan av både national deaths och national cases
     dfndd = pd.read_csv('National_Daily_Deaths.csv') #däser in csv filen
     sumdeaths = dfndd['National_Daily_Deaths'].sum()
@@ -42,9 +42,4 @@ def CVSD():
     plt.legend()
     plt.show()
 
-CVSD()
-
-
-
-
-
+CasesVsDeaths()
