@@ -1,25 +1,31 @@
 import plotly.express as px
+from plotly.subplots import make_subplots
 import plotly.graph_objects as go
 import pandas as pd
 
 def NationalDailyDeaths():
-    ndd = pd.read_csv('National_Daily_Deaths.csv')
-    fig = px.bar(ndd, x= 'Date', y='National_Daily_Deaths')
+    nationaldailydeaths = pd.read_csv('National_Daily_Deaths.csv')
+    fig = px.bar(nationaldailydeaths, x= 'Date', y='National_Daily_Deaths')
     return fig
-    
+
 def NationalDailyIcuAdmissions():
-    ndicua = pd.read_csv('National_Daily_ICU_Admissions.csv')
-    fig = px.bar(ndicua, x='Date', y='National_Daily_ICU_Admissions')
+    nationaldailyicuadmissions = pd.read_csv('National_Daily_ICU_Admissions.csv')
+    fig = px.bar(nationaldailyicuadmissions, x='Date', y='National_Daily_ICU_Admissions')
     return fig
 
 def CasesVsDeaths():
-    dfndd = pd.read_csv('National_Daily_Deaths.csv') #däser in csv filen
-    sumdeaths = dfndd['National_Daily_Deaths'].sum()
-    dfrdc = pd.read_csv('Regional_Daily_Cases.csv')
-    sumcases = dfrdc['Sweden_Total_Daily_Cases'].sum()
+    dfnationaldailydeaths = pd.read_csv('National_Daily_Deaths.csv') #däser in csv filen
+    sumdeaths = dfnationaldailydeaths['National_Daily_Deaths'].sum()
+    dfregionaldailycases = pd.read_csv('Regional_Daily_Cases.csv')
+    sumcases = dfregionaldailycases['Sweden_Total_Daily_Cases'].sum()
 
-    labels = ['Cases', 'Deaths']
+    labels = ['Total Cases', 'Deaths']
     values = [sumcases, sumdeaths]
     fig = go.Figure(data=[go.Pie(labels=labels, values=values)])
     return fig
 
+
+def GenderDifference():
+    dfgenderdata = pd.read_csv('Gender_Data.csv')
+    fig = px.bar(dfgenderdata, x='Gender', y='Total_Deaths')
+    return fig
