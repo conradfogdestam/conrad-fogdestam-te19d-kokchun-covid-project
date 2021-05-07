@@ -1,1 +1,3 @@
-# conrad-fogdestam-te19d-kokchun-covid-project
+# Conrad Fogdestam Covid-19 Visualizer
+
+
