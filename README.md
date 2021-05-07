@@ -1,6 +1,6 @@
 # Conrad Fogdestam COVID-19 Visualizer
 
-#Planering
+<h1>Planering</h1>
 <details>
 <summary>How do I dropdown?</summary>
 <br>
