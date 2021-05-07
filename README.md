@@ -2,7 +2,7 @@
 
 <details>
 <summary>Planering</summary>
-<img src="https://apaskulin.github.io/waxtechnical/images/pup.jpg" width="500">
+<img src='C:\Users\conra\Documents\Photoshop\Pictures\kokchun.png'>
 <br>
 </details>
 
