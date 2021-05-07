@@ -27,15 +27,15 @@ def CasesVsDeaths():
 
 def GenderDifference1():
     dfgenderdata = pd.read_csv('Gender_Data.csv')
-    fig = px.bar(dfgenderdata, x='Gender', y='Total_Cases', width=800, height=600, title="Gender Cases Total (Male Vs Female)")
+    fig = px.bar(dfgenderdata, x='Gender', y='Total_Cases', width=750, height=600, title="Gender Cases Total (Male Vs Female)")
     return fig
 
 def GenderDifference2():
     dfgenderdata = pd.read_csv('Gender_Data.csv')
-    fig = px.bar(dfgenderdata, x='Gender', y='Total_Deaths', width=800, height=600, title="Gender Death Total (Male Vs Female)")
+    fig = px.bar(dfgenderdata, x='Gender', y='Total_Deaths', width=750, height=600, title="Gender Death Total (Male Vs Female)")
     return fig
 
 def GenderDifference3():
     dfgenderdata = pd.read_csv('Gender_Data.csv')
-    fig = px.bar(dfgenderdata, x='Gender', y='Total_ICU_Admissions', width=800, height=600, title="Gender ICU Admissions Total (Male Vs Female)")
+    fig = px.bar(dfgenderdata, x='Gender', y='Total_ICU_Admissions', width=750, height=600, title="Gender ICU Admissions Total (Male Vs Female)")
     return fig
