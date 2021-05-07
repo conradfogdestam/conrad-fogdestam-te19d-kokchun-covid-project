@@ -2,7 +2,7 @@
 
 <details>
 <summary>Planering</summary>
-<img src='C:\Users\conra\Documents\Photoshop\Pictures\kokchun.png'>
+<img src='\Users\conra\Documents\Photoshop\Pictures\kokchun.png'>
 <br>
 </details>
 
