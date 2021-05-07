@@ -5,12 +5,12 @@ import pandas as pd
 
 def NationalDailyDeaths():
     nationaldailydeaths = pd.read_csv('National_Daily_Deaths.csv')
-    fig = px.bar(nationaldailydeaths, x= 'Date', y='National_Daily_Deaths')
+    fig = px.bar(nationaldailydeaths, x= 'Date', y='National_Daily_Deaths', width=1100, height=700, title="National Daily Deaths")
     return fig
 
 def NationalDailyIcuAdmissions():
     nationaldailyicuadmissions = pd.read_csv('National_Daily_ICU_Admissions.csv')
-    fig = px.bar(nationaldailyicuadmissions, x='Date', y='National_Daily_ICU_Admissions')
+    fig = px.bar(nationaldailyicuadmissions, x='Date', y='National_Daily_ICU_Admissions', width=1100, height=700, title="National Daily ICU Admissions")
     return fig
 
 def CasesVsDeaths():
@@ -25,7 +25,17 @@ def CasesVsDeaths():
     return fig
 
 
-def GenderDifference():
+def GenderDifference1():
     dfgenderdata = pd.read_csv('Gender_Data.csv')
-    fig = px.bar(dfgenderdata, x='Gender', y='Total_Deaths')
+    fig = px.bar(dfgenderdata, x='Gender', y='Total_Cases', width=800, height=600, title="Gender Cases Total (Male Vs Female)")
+    return fig
+
+def GenderDifference2():
+    dfgenderdata = pd.read_csv('Gender_Data.csv')
+    fig = px.bar(dfgenderdata, x='Gender', y='Total_Deaths', width=800, height=600, title="Gender Death Total (Male Vs Female)")
+    return fig
+
+def GenderDifference3():
+    dfgenderdata = pd.read_csv('Gender_Data.csv')
+    fig = px.bar(dfgenderdata, x='Gender', y='Total_ICU_Admissions', width=800, height=600, title="Gender ICU Admissions Total (Male Vs Female)")
     return fig
