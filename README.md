@@ -2,7 +2,7 @@
 
 <details>
 <summary>Planering</summary>
-<img src='\Users\conra\Documents\Photoshop\Pictures\kokchun.png'>
+<img src='https://cdn.discordapp.com/attachments/821707894860021800/840242274058371102/kokchun.png'>
 <br>
 </details>
 
