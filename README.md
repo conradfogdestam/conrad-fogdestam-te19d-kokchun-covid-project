@@ -2,7 +2,6 @@
 
 <details>
  <summary>Planering</summary>
-<br>
 ![kokchun](https://user-images.githubusercontent.com/70263566/117467533-10dd8a00-af54-11eb-98b8-d56e452df00b.png)
 </details>
 
