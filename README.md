@@ -1,3 +1,3 @@
-# Conrad Fogdestam Covid-19 Visualizer
+# Conrad Fogdestam COVID-19 Visualizer
 
 
