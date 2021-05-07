@@ -2,7 +2,7 @@
 
 <details>
 <summary>Planering</summary>
-<img src='https://cdn.discordapp.com/attachments/821707894860021800/840242274058371102/kokchun.png'>
+<img src='https://cdn.discordapp.com/attachments/821707894860021800/840242792738717696/kokchun_1.png'>
 <br>
 </details>
 
