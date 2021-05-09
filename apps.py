@@ -22,6 +22,7 @@ title = {
     'display':'flex',
     'justify-content':'center',
     'font-size':'100px',
+    'font-family':'impact'
 }
 
 center = {
@@ -34,7 +35,7 @@ apps.layout = row = html.Div(
         html.Div(
             dbc.Row(
             [
-                dbc.Col(html.Div("[CORONA VIZUALIZER]")),
+                dbc.Col(html.Div("COVID-19 VIZUALIZER")),
             ],
         ),
         style=title
@@ -89,7 +90,6 @@ apps.layout = row = html.Div(
     ],
 
 )
-
 
 if __name__ == "__main__":
     apps.run_server(debug=True)
